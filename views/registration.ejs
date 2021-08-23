@@ -1,0 +1,28 @@
+<%- include('parts/header')%>
+<%- include('parts/navbar')%>
+
+<main class="mt-4">
+    <div class="container">
+        <h1 class="text-center">Registration</h1>
+    </div>
+    <form action="/registration" method="POST" class="form w-50 mx-auto mt-4">
+        <% if(error){ %>
+            <div class="alert alert-danger"> <%= error %> </div>
+        <% } %>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"  autocomplete="off" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputName">Fullname</label>
+            <input type="text" maxlength="32" name="name" class="form-control" id="exampleInputFullnane" placeholder="John Doe"  autocomplete="off" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" minlength="8" name="password" class="form-control" id="exampleInputPassword1" placeholder="password"  autocomplete="off" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Register</button>
+    </form>
+</main>
+
+<%- include('parts/footer')%>

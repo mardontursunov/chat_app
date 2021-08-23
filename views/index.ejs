@@ -1,0 +1,10 @@
+<%- include('parts/header')%>
+<%- include('parts/navbar')%>
+<div class="container">
+    <% if(user.name) { %>
+    <h1>Salom <%= user.name %></h1>
+    <% } else { %>
+        <h1>Salom mehmon</h1>
+    <% } %>
+</div>
+<%- include('parts/footer')%>
